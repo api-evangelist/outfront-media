@@ -1,0 +1,92 @@
+aid: outfront-media
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/outfront-media/refs/heads/main/apis.yml
+name: OUTFRONT Media
+tags:
+  - Out Of Home Advertising
+  - Digital Out Of Home
+  - Billboards
+  - Transit Advertising
+  - Programmatic Advertising
+  - Advertising
+  - Media
+  - REIT
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+common:
+  - type: Website
+    url: https://www.outfront.com/
+  - type: InvestorRelations
+    url: https://investor.outfront.com/
+  - type: Blog
+    url: https://www.outfront.com/blog
+  - type: Contact
+    url: https://www.outfront.com/contact-us
+  - type: PrivacyPolicy
+    url: https://www.outfront.com/privacy
+  - type: TermsOfService
+    url: https://www.outfront.com/terms-of-use
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/outfront-media
+  - type: Features
+    data:
+      - name: Billboards
+        description: Static and digital roadside billboards across major U.S. markets, including the OUTFRONT digital billboard network.
+      - name: Transit Advertising
+        description: Transit advertising across major U.S. transit systems, including the MTA Advertising Network covering New York City subways, buses, and commuter rail.
+      - name: Digital Out Of Home (DOOH)
+        description: Digital liveboards and place-based digital displays delivering dynamic creative across urban and roadside environments.
+      - name: Times Square
+        description: Premium digital and static spectaculars in Times Square, including high-impact landmark inventory.
+      - name: Street Furniture And Place Based
+        description: Bus shelters, urban panels, and place-based displays integrated into the streetscape.
+      - name: Programmatic DOOH
+        description: Inventory made available through programmatic supply-side platforms for automated and biddable buying of digital out-of-home placements.
+      - name: Mobile And Social Amplification
+        description: Extension of OOH campaigns through mobile retargeting and social amplification tied to physical placements.
+  - type: UseCases
+    data:
+      - name: National Brand Campaigns
+        description: Large national advertisers running multi-market OOH campaigns across billboards, transit, and digital networks.
+      - name: Local And SMB Advertising
+        description: Local and small-to-medium business advertisers buying market-specific OOH inventory.
+      - name: Programmatic Buying
+        description: Agencies and DSPs purchasing OUTFRONT inventory programmatically through partner SSPs.
+      - name: Transit Network Sponsorship
+        description: Brand takeovers and sponsorships across transit networks including the MTA in New York.
+      - name: Audience Measurement And Attribution
+        description: Attributing store visits, brand lift, and outcomes to OOH exposure using mobile location data partnerships.
+  - type: Integrations
+    data:
+      - name: Programmatic DOOH Supply Side Platforms
+        description: OUTFRONT inventory is made available through programmatic DOOH SSPs such as Vistar Media and Place Exchange for automated buying.
+      - name: Demand Side Platforms
+        description: Buyers reach OUTFRONT inventory programmatically through DSPs that integrate with DOOH SSP partners.
+      - name: Measurement And Location Data Providers
+        description: Audience measurement, attribution, and mobile location data partners used to plan and measure OOH and DOOH campaigns.
+  - type: Solutions
+    data:
+      - name: OUTFRONT Studios
+        description: In-house creative and content studio for designing and producing OOH and digital out-of-home campaigns.
+      - name: MTA Advertising Network
+        description: Long-running advertising rights across New York's Metropolitan Transportation Authority covering subway, bus, and commuter rail surfaces.
+description: >-
+  OUTFRONT Media is a U.S. out-of-home (OOH) advertising company and real estate investment trust
+  (NYSE: OUT) operating a national portfolio of billboards, digital displays, and transit
+  advertising assets. The company runs the MTA Advertising Network across New York City's
+  subways, buses, and commuter rail, along with roadside billboards, digital liveboards,
+  Times Square spectaculars, and place-based displays in major U.S. markets. OUTFRONT's
+  digital inventory is made available programmatically through DOOH supply-side partners
+  such as Vistar Media and Place Exchange. OUTFRONT sold its Canadian operations to Bell
+  Media in October 2022 to focus on the U.S. market. OUTFRONT does not publish a developer
+  portal or public APIs; programmatic access to its inventory is mediated through third-party
+  DOOH SSPs.
+created: '2024-01-15'
+modified: '2026-05-23'
+position: Consuming
+specificationVersion: '0.19'
+apis: []
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,70 @@
+generated: '2026-08-12'
+method: probed
+source: >-
+  Live anonymous HTTP probes of every OUTFRONT-controlled host reachable from apis.yml
+  (www.outfront.com), plus the two hosts contract discovery turned up (api.outfront.com,
+  www.myoutfront.com). No /.well-known/ document was served by any of them.
+note: >-
+  RECORDED ABSENCE, NOT A PRESENCE. Every probed path either returned a real 404 or, on
+  www.myoutfront.com, an HTTP 200 carrying the React single-page-app shell for EVERY path
+  including nonsense ones — the classic SPA catch-all false positive. A 200 that returns
+  an HTML shell is not a document. NO WellKnown and NO SecurityTxt pointer is emitted in
+  apis.yml, because OUTFRONT serves neither.
+documents_found: 0
+
+hosts:
+- host: https://www.outfront.com
+  role: corporate website (apis.yml Website)
+  server: Next.js / Sitecore
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /llms.txt, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /robots.txt, status: 200, content_type: text/plain, file: null,
+     note: 'Served, but robots.txt is not a /.well-known/ discovery document; Allow / with Sitecore/_next paths disallowed.'}
+
+- host: https://outfront.com
+  role: apex redirect
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+
+- host: https://api.outfront.com
+  role: >-
+    api. subdomain — resolves to Vercel (cname.vercel-dns.com) and serves the unmodified
+    "Create Next App" starter template at /. There is no API behind it.
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /llms.txt, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+  - {path: /robots.txt, status: 404, content_type: 'text/html; charset=utf-8', file: null}
+
+- host: https://www.myoutfront.com
+  role: >-
+    MyOutfront customer billing-and-payments portal (React SPA on Azure App Service,
+    Microsoft Entra ID / MSAL sign-in). Linked from outfront.com as "Sign into your account".
+  soft_200: true
+  documents:
+  - {path: /.well-known/security.txt, status: 200, content_type: text/html, file: null,
+     verdict: miss, note: '728-byte SPA shell, identical body for every path — not a document.'}
+  - {path: /.well-known/openid-configuration, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /.well-known/oauth-authorization-server, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /.well-known/api-catalog, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /.well-known/ai-plugin.json, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /.well-known/agent-card.json, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /.well-known/agent.json, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /llms.txt, status: 200, content_type: text/html, file: null, verdict: miss}
+  - {path: /robots.txt, status: 200, content_type: text/plain, file: null,
+     note: 'Real robots.txt (User-agent: * / Disallow: <blank>), the one path that is not the SPA shell.'}
+
+x-evidence:
+  fetched: '2026-08-12'
+  user_agent: anonymous browser UA, no credentials
+  method: HTTP GET with redirects followed

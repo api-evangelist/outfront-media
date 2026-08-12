@@ -1,0 +1,207 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  npm registry metadata endpoints (https://registry.npmjs.org/@outfront%2f<pkg>) for every
+  package published under the @outfront npm scope; cross-checked against the GitHub
+  organizations that carry the OUTFRONT name.
+summary:
+  registries_searched: [npm, pypi, rubygems, crates.io, nuget, maven-central, pkg.go.dev, packagist]
+  registries_with_hits: [npm]
+  package_count: 9
+  api_client_count: 0
+  sdk_count: 0
+note: >-
+  OUTFRONT Media publishes NO API client libraries or SDKs, because it publishes no public
+  API. What DOES exist is a first-party npm scope — @outfront — carrying nine MIT-licensed
+  packages that are internal front-end build dependencies for OUTFRONT's own web
+  applications ("onsmart" = OUTFRONT ON Smart Media, the company's ad-tech platform). They
+  are React UI kits, a map component library, an auth-client wrapper, a forms library, a
+  Create React App fork, and two OpenSearch operations tools. None of them wraps a public
+  OUTFRONT API and none is documented for external consumers, so NO `SDKs` pointer is
+  emitted in apis.yml — emitting one would credit OUTFRONT with API client libraries it
+  does not ship. Only the neutral `Packages` pointer is wired.
+ownership_note: >-
+  Judged first-party on three signals rather than on the registry name alone: (1) the scope
+  is @outfront; (2) every package README embeds the OUTFRONT primary logo
+  (beakyn-ui.s3.amazonaws.com/OUT_PRIMARY_LOGO_POS_RGB_BLACK_PILL.svg); (3) the source repos
+  are named for OUTFRONT's own product, "onsmart" (OUTFRONT ON Smart Media). The publishing
+  maintainers are jeff.frank, markd_om and hileo.beakyn, and the git repositories sit under
+  github.com/Beakyn — Beakyn is the development studio that builds the ON Smart Media
+  front end for OUTFRONT (beakyn.com no longer resolves). The packages are therefore
+  vendor-authored but OUTFRONT-scoped and OUTFRONT-branded; they are recorded as official
+  and explicitly as non-client-library.
+
+packages:
+- language: javascript
+  registry: npm
+  name: "@outfront/ui-kit"
+  url: https://www.npmjs.com/package/@outfront/ui-kit
+  install: npm install @outfront/ui-kit
+  version: 2.77.1
+  published: '2026-03-20'
+  license: MIT
+  repository: https://github.com/Beakyn/onsmart-ui-kit
+  official: true
+  api_client: false
+  kind: internal-ui-library
+  description: Core React UI components for the OUTFRONT ON Smart Media front end.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/map"
+  url: https://www.npmjs.com/package/@outfront/map
+  install: npm install @outfront/map
+  version: 0.1.31
+  published: '2026-03-20'
+  license: MIT
+  repository: https://github.com/Beakyn/onsmart-ui-kit
+  official: true
+  api_client: false
+  kind: internal-ui-library
+  description: Map UI components (inventory/asset mapping surfaces).
+
+- language: javascript
+  registry: npm
+  name: "@outfront/form-legacy"
+  url: https://www.npmjs.com/package/@outfront/form-legacy
+  install: npm install @outfront/form-legacy
+  version: 2.0.0-beta.25
+  published: '2025-12-24'
+  license: MIT
+  repository: https://github.com/Beakyn/bkn-form
+  official: true
+  api_client: false
+  kind: internal-ui-library
+  description: Automatic forms generated from a taxonomy schema. Still on a beta tag.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/ui-legacy"
+  url: https://www.npmjs.com/package/@outfront/ui-legacy
+  install: npm install @outfront/ui-legacy
+  version: 2.0.0-beta.46
+  published: '2025-12-24'
+  license: MIT
+  repository: https://github.com/Beakyn/bkn-ui-react
+  official: true
+  api_client: false
+  kind: internal-ui-library
+  description: Superseded React component set carried forward from Beakyn. Still on a beta tag.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/auth-client"
+  url: https://www.npmjs.com/package/@outfront/auth-client
+  install: npm install @outfront/auth-client
+  version: 1.6.0
+  published: '2025-11-25'
+  license: MIT
+  repository: https://github.com/Beakyn/onsmart-auth-client
+  official: true
+  api_client: false
+  kind: internal-auth-helper
+  description: >-
+    Authorization management and authentication checking for OUTFRONT's React apps. Note
+    this is a session/permission helper for OUTFRONT's own front end, not an OAuth client
+    for a public OUTFRONT API.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/react-scripts"
+  url: https://www.npmjs.com/package/@outfront/react-scripts
+  install: npm install @outfront/react-scripts
+  version: 0.4.1
+  published: '2025-12-01'
+  license: MIT
+  repository: https://github.com/beakyn/create-react-app
+  official: true
+  api_client: false
+  kind: internal-build-tooling
+  description: Fork of Create React App scripts (4.0.3 base) used to build the OUTFRONT apps.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/opensearch-migration-cli"
+  url: https://www.npmjs.com/package/@outfront/opensearch-migration-cli
+  install: npm install -g @outfront/opensearch-migration-cli
+  version: 1.2.0
+  published: '2025-11-25'
+  license: null
+  repository: null
+  official: true
+  api_client: false
+  kind: internal-ops-cli
+  description: >-
+    OpenSearch index migration CLI for OUTFRONT's own search infrastructure. Not a public
+    OUTFRONT API CLI, so no `CLI` pointer is emitted.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/opensearch-dump"
+  url: https://www.npmjs.com/package/@outfront/opensearch-dump
+  install: npm install @outfront/opensearch-dump
+  version: 1.0.0
+  published: '2025-11-25'
+  license: MIT
+  repository: https://github.com/Beakyn/onsmart-ops
+  official: true
+  api_client: false
+  kind: internal-ops-tooling
+  description: OpenSearch dump/restore utility for OUTFRONT's own search infrastructure.
+
+- language: javascript
+  registry: npm
+  name: "@outfront/fetch-environment-variables"
+  url: https://www.npmjs.com/package/@outfront/fetch-environment-variables
+  install: npm install @outfront/fetch-environment-variables
+  version: 0.0.6
+  published: '2025-11-25'
+  license: MIT
+  repository: null
+  official: true
+  api_client: false
+  kind: internal-build-tooling
+  description: Runtime environment-variable fetcher used by the OUTFRONT front-end builds.
+
+registries_with_no_result:
+- {registry: pypi, query: outfront, status: 404}
+- {registry: rubygems, query: outfront, result: no first-party package}
+- {registry: crates.io, query: outfront, result: no first-party package}
+- {registry: nuget, query: outfront, result: no first-party package}
+- {registry: maven-central, query: outfront, result: no first-party package}
+- {registry: pkg.go.dev, query: outfront, result: no first-party package}
+- {registry: packagist, query: outfront, result: no first-party package}
+
+github_organizations:
+- org: OutfrontMediaUS
+  url: https://github.com/OutfrontMediaUS
+  name: Outfront Media
+  created: '2016-07-06'
+  public_repos: 4
+  first_party: true
+  note: >-
+    The only OUTFRONT GitHub org with public code. All four repos are forks or mirrors —
+    source2swagger (Ruby, builds Swagger JSON from annotations), an OFM fork of lograge, a
+    mirror of Apache Kafka, and a fork of JASONETTE-Android. Nothing published since
+    2019-03-13, and no first-party library or spec among them.
+- org: OUTFRONT-com
+  url: https://github.com/OUTFRONT-com
+  name: decommissioned OUTFRONT Websites
+  email: web@outfront.com
+  public_repos: 0
+  first_party: true
+  note: Explicitly labelled decommissioned; zero public repos.
+- org: outfront-media-lab
+  url: https://github.com/outfront-media-lab
+  name: The Lab @ Outfront Media
+  public_repos: 0
+  first_party: true
+  note: Creative-technology group (nyliveboards.outfrontmedia.com); zero public repos.
+
+x-evidence:
+  fetched: '2026-08-12'
+  probes:
+  - {url: 'https://registry.npmjs.org/-/v1/search?text=outfront', http_status: 200, result: '9 @outfront-scoped packages'}
+  - {url: 'https://registry.npmjs.org/@outfront%2fui-kit', http_status: 200}
+  - {url: 'https://pypi.org/pypi/outfront/json', http_status: 404}
+  - {url: 'https://api.github.com/orgs/OutfrontMediaUS', http_status: 200}

@@ -28,6 +28,16 @@ access: 3rd-Party
 common:
   - type: DomainSecurity
     url: security/outfront-media-domain-security.yml
+  - type: Packages
+    url: packages/outfront-media-packages.yml
+  - type: LLMsTxt
+    url: llms/outfront-media-llms.txt
+  - type: Plans
+    url: plans/outfront-media-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/outfront-media-rate-limits.yml
+  - type: GitHubOrganization
+    url: https://github.com/OutfrontMediaUS
   - type: Website
     url: https://www.outfront.com/
   - type: InvestorRelations
@@ -96,10 +106,37 @@ description: >-
   portal or public APIs; programmatic access to its inventory is mediated through third-party
   DOOH SSPs.
 created: '2024-01-15'
-modified: '2026-05-23'
+modified: '2026-08-12'
 position: Consuming
 specificationVersion: '0.19'
 apis: []
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    OUTFRONT ships software only as end-user product — the MyOutfront billing portal and the
+    SmartSCOUT planning platform, both sold and provisioned through a sales conversation —
+    and the one host that looks like an API, api.outfront.com, serves the unmodified
+    "Create Next App" Vercel starter template rather than an API; the 677-URL sitemap
+    contains no developer, docs, reference, status or pricing page, and developer.outfront.com,
+    docs.outfront.com and apis.outfront.com do not resolve.
+  evidence:
+    - url: https://api.outfront.com/
+      status: 200
+    - url: https://api.outfront.com/openapi.json
+      status: 404
+    - url: https://www.outfront.com/openapi.json
+      status: 404
+    - url: https://www.outfront.com/.well-known/security.txt
+      status: 404
+    - url: https://www.outfront.com/sitemap.xml
+      status: 200
+  checked: '2026-08-12'

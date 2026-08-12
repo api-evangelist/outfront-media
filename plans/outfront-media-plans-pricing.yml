@@ -1,0 +1,39 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://www.outfront.com/sitemap.xml (complete 677-URL crawl) plus
+  https://www.outfront.com/ad-tech, https://www.outfront.com/ad-tech/programmatic,
+  https://www.outfront.com/ad-tech/smartscout and https://www.outfront.com/contact-us
+plan_count: 0
+plans: []
+note: >-
+  OUTFRONT Media publishes no plans, tiers, quotas, rate cards or prices of any kind — for an
+  API or for anything else. There is no /pricing page and no /plans page anywhere in the
+  677-URL sitemap. This is the expected shape for the business: OUTFRONT sells out-of-home
+  advertising inventory (billboards, transit, digital liveboards, Times Square spectaculars)
+  priced per market, per format and per flight through a sales conversation, and it sells no
+  developer product at all. plan_count 0 is the measurement, not a harvesting gap.
+commercial_model:
+  type: media-inventory-sales
+  audience: national brands, agencies, local and SMB advertisers
+  developer_pricing_published: false
+  api_billing: none
+  pricing_page: null
+  self_serve_signup: false
+  sales_entry_point: https://www.outfront.com/contact-us
+  programmatic_path: >-
+    Digital inventory is transacted programmatically through third-party DOOH supply-side
+    platforms (Vistar Media, Place Exchange) and bought "through your DSP of choice".
+    Those platforms set and publish their own pricing; OUTFRONT publishes none, and their
+    rate cards are not OUTFRONT's to record here.
+  customer_portal:
+    url: https://www.myoutfront.com/
+    purpose: billing and payments for existing OUTFRONT advertisers
+    note: Authenticated (Microsoft Entra ID). Displays an existing customer's invoices; publishes no price list.
+x-evidence:
+  fetched: '2026-08-12'
+  probes:
+  - {url: 'https://www.outfront.com/sitemap.xml', http_status: 200, result: '677 URLs; no pricing, plans, rate-card or developer page'}
+  - {url: 'https://www.outfront.com/ad-tech/programmatic', http_status: 200, result: 'no prices; directs buyers to their own DSP'}
+  - {url: 'https://www.outfront.com/ad-tech/smartscout', http_status: 200, result: 'proprietary data platform; only affordance is a contact form'}
+  - {url: 'https://www.myoutfront.com/', http_status: 200, result: 'SPA login shell, "Your new home for billing and payments"'}

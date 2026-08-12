@@ -1,0 +1,29 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://www.outfront.com/sitemap.xml (complete 677-URL crawl) — no developer, API,
+  documentation or reference page exists to publish limits on.
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  OUTFRONT Media publishes no rate limits because it publishes no API. There is no developer
+  portal, no API reference, no OpenAPI, and therefore no throttling policy, no quota, no
+  RateLimit-* / X-RateLimit-* response headers and no documented 429 behaviour to record.
+  limit_count 0 here means "no API exists", not "an API exists whose limits are
+  undocumented" — the distinction matters when reading this artifact against providers that
+  ship an API and simply stay silent about its limits.
+observed_response_headers:
+  probed: true
+  hosts: [www.outfront.com, api.outfront.com, www.myoutfront.com]
+  found: []
+  note: >-
+    No rate-limit signalling header of any family was observed on any anonymous response
+    from any OUTFRONT-controlled host.
+x-evidence:
+  fetched: '2026-08-12'
+  probes:
+  - {url: 'https://www.outfront.com/sitemap.xml', http_status: 200, result: 'no developer or API documentation page among 677 URLs'}
+  - {url: 'https://api.outfront.com/', http_status: 200, result: 'default Create Next App starter template; no API behind it'}
+  - {url: 'https://www.outfront.com/openapi.json', http_status: 404}
+  - {url: 'https://developer.outfront.com', http_status: null, result: NXDOMAIN}

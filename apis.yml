@@ -3,6 +3,15 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/outfront-media/refs/heads/main/apis.yml
 name: OUTFRONT Media
 tags:
+  - Out-of-Home Advertising
+  - Digital Out Of Home
+  - Billboards
+  - Transit Advertising
+  - Programmatic Advertising
+  - Advertising
+  - Media
+  - REIT
+tags_raw:
   - Out Of Home Advertising
   - Digital Out Of Home
   - Billboards
